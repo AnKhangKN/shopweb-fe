@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TableComponent from "../../../components/admin/TableComponent/TableComponent";
 import ModalComponent from "../../../components/admin/ModalComponent/ModalComponent";
+import SortSelectComponent from "../../../components/admin/SortSelectComponent/SortSelectComponent";
 
 const columns = [
   { title: "Tên", dataIndex: "name", key: "name" },
@@ -37,19 +38,17 @@ const UserManager = () => {
 
         {/* Select lọc theo tuổi */}
         <div>
-          <select
+          <SortSelectComponent
             id="ageFilter"
             value={selectedAge}
             onChange={(e) => setSelectedAge(e.target.value)}
-            style={{ padding: "6px", marginLeft: "8px" }}
           >
-            <option value="all">Tất cả</option>
             {ageOptions.map((age) => (
               <option key={age} value={age}>
                 {age}
               </option>
             ))}
-          </select>
+          </SortSelectComponent>
         </div>
       </div>
 

@@ -12,6 +12,7 @@ const AdminLayout = ({ children }) => {
   return (
     <div style={{ display: "flex" }}>
       <SidebarComponent isVisible={isShowSidebar} />
+
       <div style={{ width: "100%" }}>
         <HeaderComponent
           toggleSidebar={toggleSidebar}

@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  border-radius: 10px;
+  height: 94vh;
   font-size: 17px;
   background-color: #f5f5f5;
   overflow: hidden;
   transition: all 0.3s ease;
   width: ${(props) => (props.$isVisible ? "320px" : "100px")};
+  margin: 20px 0px 20px 20px;
 `;
 
 export const LogoWrapper = styled.div`

@@ -4,6 +4,7 @@ import OrderManager from "../pages/admin/OrderManager/OrderManager";
 import ProductManager from "../pages/admin/ProductManager/ProductManager";
 import Statistics from "../pages/admin/Statistics/Statistics";
 import UserManager from "../pages/admin/UserManager/UserManager";
+import Information from "../pages/admin/Information/Information";
 
 export const routes = [
   {
@@ -29,6 +30,11 @@ export const routes = [
   {
     path: "/admin/user",
     page: UserManager,
+    isLayOutAdmin: true,
+  },
+  {
+    path: "/admin/information",
+    page: Information,
     isLayOutAdmin: true,
   },
   {
