@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 `;
 
 export const ContainerWrapper = styled.div`
@@ -32,4 +33,8 @@ export const IconButton = styled.div`
   &:hover {
     background-color: #ccc;
   }
+`;
+
+export const ChildrenContainer = styled.div`
+  padding: 0px 15px 15px 15px;
 `;

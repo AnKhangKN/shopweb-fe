@@ -1,7 +1,18 @@
 import { IoIosClose } from "react-icons/io";
-import { ContainerWrapper, IconButton, Wrapper } from "./style";
+import {
+  ChildrenContainer,
+  ContainerWrapper,
+  IconButton,
+  Wrapper,
+} from "./style";
 
-const ModalComponent = ({ children, title = "Title Modal", onClose }) => {
+const ModalComponent = ({
+  styleContainer,
+  styleChildren,
+  children,
+  title = "Title Modal",
+  onClose,
+}) => {
   const handleContentClick = (e) => {
     e.stopPropagation(); // Ngăn click lan ra ngoài để tránh đóng modal
   };
@@ -10,7 +21,7 @@ const ModalComponent = ({ children, title = "Title Modal", onClose }) => {
     <>
       <Wrapper onClick={onClose}>
         <div onClick={handleContentClick}>
-          <ContainerWrapper>
+          <ContainerWrapper style={styleContainer}>
             <div className="d-flex align-items-center justify-content-between">
               <div style={{ fontSize: "20px" }} className="p-4">
                 {title}
@@ -20,7 +31,9 @@ const ModalComponent = ({ children, title = "Title Modal", onClose }) => {
               </IconButton>
             </div>
 
-            <div className="p-4">{children}</div>
+            <ChildrenContainer style={styleChildren}>
+              {children}
+            </ChildrenContainer>
           </ContainerWrapper>
         </div>
       </Wrapper>
