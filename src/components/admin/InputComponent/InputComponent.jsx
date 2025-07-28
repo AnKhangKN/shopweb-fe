@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
 `;
 
@@ -47,19 +47,23 @@ const InputComponent = ({
   styleContainer,
   value,
   placeholder = " ",
+  title = "",
 }) => {
   return (
-    <Container style={styleContainer}>
-      <Input
-        id={id}
-        placeholder={placeholder}
-        onChange={onChange}
-        value={value}
-        autoComplete={autoComplete}
-        required
-      />
-      <Label htmlFor={id}>{name}</Label>
-    </Container>
+    <div>
+      <div style={{ marginLeft: "10px" }}>{title}</div>
+      <Container style={styleContainer}>
+        <Input
+          id={id}
+          placeholder={placeholder}
+          onChange={onChange}
+          value={value}
+          autoComplete={autoComplete}
+          required
+        />
+        <Label htmlFor={id}>{name}</Label>
+      </Container>
+    </div>
   );
 };
 

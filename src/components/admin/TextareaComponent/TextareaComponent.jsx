@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 100%;
 `;
 
@@ -48,19 +48,24 @@ const TextareaComponent = ({
   styleContainer,
   value,
   placeholder = " ",
+  title = "",
 }) => {
   return (
-    <Container style={styleContainer}>
-      <Textarea
-        id={id}
-        placeholder={placeholder}
-        onChange={onChange}
-        value={value}
-        autoComplete={autoComplete}
-        required
-      ></Textarea>
-      <Label htmlFor={id}>{name}</Label>
-    </Container>
+    <>
+      <div>{title}</div>
+
+      <Container style={styleContainer}>
+        <Textarea
+          id={id}
+          placeholder={placeholder}
+          onChange={onChange}
+          value={value}
+          autoComplete={autoComplete}
+          required
+        ></Textarea>
+        <Label htmlFor={id}>{name}</Label>
+      </Container>
+    </>
   );
 };
 
