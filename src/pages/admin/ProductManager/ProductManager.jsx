@@ -321,8 +321,6 @@ const ProductManager = () => {
       }));
 
       setAllProducts(formattedProducts);
-
-      console.log(res.product);
     } catch (error) {
       console.log(error);
     }
